@@ -1,0 +1,82 @@
+{
+    "blogs" : [
+        {   
+            "id" : 1,
+            "title" : "Santorini, Greece",
+            "body" : "A visit to Santorini is the ultimate gastronomic experience, as the island is a true culinary paradise! Treat your taste buds to some famous traditional products like cherry tomatoes, white egg plants, fava, caper and “hloró tyrí”, a special kind of fresh goat cheese found on the island, or why not try some of the exceptional wines produced from grapes grown in the volcanic soil of the island! Assyrtiko, Athyri, Aidani, Mantilaria and Mavrotragano are just some of the distinctive varieties that you can taste at the island’s famous wineries (some of them operate as a museum as well) or at restaurants.",
+            "img1" : "/Destination/santorini-1.jpg",
+            "img2" : "/Destination/santorini-2.jpg",
+            "img3" : "/Destination/santorini-3.jpg",
+            "img4" : "/Destination/santorini-4.jpg",
+            "img5" : "/Destination/santorini-5.jpg",
+            "img6" : "/Destination/santorini-6.jpg",
+            "img7" : "/Destination/santorini-7.jpg",
+            "img8" : "/Destination/santorini-8.jpg"
+        },
+        {   
+            "id" : 2,
+            "title" : "Maldives",
+            "body" : "Home to 1,192 coral islands, the tropical paradise of Maldives country lies in the Indian Ocean to the southern side of Sri Lanka. The islands sheltered in this archipelago are categorized into natural atolls, most of which remain uninhabited. Floating on serene ocean waters, this island nation makes for the perfect getaway for leisure seekers away from the chaos and anxiety of city life. The Maldives tourism is known popularly across the globe for its pristine white sandy beaches, blooming reef fishes, crystalline lagoons, palm-fringed islands, and lavish water villas.",
+            "img1" : "/Destination/maldives-1.jpg",
+            "img2" : "/Destination/maldives-2.jpg",
+            "img3" : "/Destination/maldives-3.jpg",
+            "img4" : "/Destination/maldives-4.jpg",
+            "img5" : "/Destination/maldives-5.jpg",
+            "img6" : "/Destination/maldives-6.jpg",
+            "img7" : "/Destination/maldives-7.jpg",
+            "img8" : "/Destination/maldives-8.jpg"
+        },
+        {   
+            "id" : 3,
+            "title" : "Slovenia, Central Europe",
+            "body" : "Close your eyes and embark on an imaginative journey to a green country, where the Alps meet the Mediterranean and the Pannonian Plain. Let your mind wander through vast green forests or charming towns. Set your imagination free and descend deep into the mysterious underground world of the Karst region or climb high to the peaks of the Alps. Make time for yourself and your loved ones and plan your future relaxing getaway together – with pampering in Slovenian spas and enjoying the unspoiled nature and its treasures that lead to health and well-being.",
+            "img1" : "/Destination/slovenia-1.jpg",
+            "img2" : "/Destination/slovenia-2.jpg",
+            "img3" : "/Destination/slovenia-3.jpg",
+            "img4" : "/Destination/slovenia-4.jpg",
+            "img5" : "/Destination/slovenia-5.jpg",
+            "img6" : "/Destination/slovenia-6.jpg",
+            "img7" : "/Destination/slovenia-7.jpg",
+            "img8" : "/Destination/slovenia-8.jpg"
+        },
+        {   
+            "id" : 4,
+            "title" : "Iceland",
+            "body" : "The feisty volcanoes, spurty geysers, steaming hillocks and lonely lava plains in itself sounds like an unforgettable adventure. Add to it the ethereal Northern lights, gleaming glacial caves, majestic whales, and warm soothing geothermal waters. Offering the best tourist places in Iceland, it is a stunning display of nature’s incredible beakyot. The unusual yet tasty Hákarl - Shark and Svið - Sheep's head, calls food junkies for an unprecedented meal. Be it shopping for souvenirs, Icelandic art or fashion clothes at Geysir, or wool sweaters and warm clothes at Kolaportid Flea Market,  Iceland has something for everyone. ",
+            "img1" : "/Destination/iceland-1.jpg",
+            "img2" : "/Destination/iceland-2.jpg",
+            "img3" : "/Destination/iceland-3.jpg",
+            "img4" : "/Destination/iceland-4.jpg",
+            "img5" : "/Destination/iceland-5.jpg",
+            "img6" : "/Destination/iceland-6.jpg",
+            "img7" : "/Destination/iceland-7.jpg",
+            "img8" : "/Destination/iceland-8.jpg"
+        },
+        {   
+            "id" : 5,
+            "title" : "Dubai, UAE",
+            "body" : "The glittering oasis in the Middle East known as Dubai is the largest and most populated city in the United Arab Emirates. It is one of the seven emirates that make up the region. The oil boom helped catapult Dubai’s development and this is pretty obvious from the kind of living standards prevalent there. It is to the credit of Dubai tourism however, that the number of tourists coming to the desert town is increasing every year.The city is an eclectic mix of old and new.There’s a lot that lures people to Dubai tourism be it the extravagance of Dubai city, top-notch infrastructure, desert safaris, shopping and other world-class attractions.",
+            "img1" : "/Destination/dubai-1.jpg",
+            "img2" : "/Destination/dubai-2.jpg",
+            "img3" : "/Destination/dubai-3.jpg",
+            "img4" : "/Destination/dubai-4.jpg",
+            "img5" : "/Destination/dubai-5.jpg",
+            "img6" : "/Destination/dubai-6.jpg",
+            "img7" : "/Destination/dubai-7.jpg",
+            "img8" : "/Destination/dubai-8.jpg"
+        },
+        {   
+            "id" : 6,
+            "title" : "Kyoto, Japan",
+            "body" : "Kyoto City attracts millions of local and international visitors each year looking for traditional Japanese culture. Temples and shrines such as Kiyomizudera Temple and Kinkakuji draw lots off attention from visitors, as do the bamboo groves of nearby Arashiyama. Stay in a traditional ryokan, take a dip in a rejuvenating onsen, and enjoy the seasonal changes of cherry blossoms and brilliant autumn foliage. Kyoto's magic is only a short bullet train ride from Tokyo. Nestled in the mountains, Miyama is one of the last towns with thatched-roof farmhouses, many of which are still inhabited. Enjoy delicious local vegetables and the famous green tea grown in Uji.",
+            "img1" : "/Destination/kyoto-1.jpg",
+            "img2" : "/Destination/kyoto-2.jpg",
+            "img3" : "/Destination/kyoto-3.jpg",
+            "img4" : "/Destination/kyoto-4.jpg",
+            "img5" : "/Destination/kyoto-5.jpg",
+            "img6" : "/Destination/kyoto-6.jpg",
+            "img7" : "/Destination/kyoto-7.jpg",
+            "img8" : "/Destination/kyoto-8.jpg"
+        }
+    ]
+}

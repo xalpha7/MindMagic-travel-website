@@ -1,0 +1,276 @@
+.mainhead{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    background-color: #560eca;
+    height: 60px;
+}
+.destinationcontainer{
+    display: grid;
+   
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    
+
+
+    height: 110%;
+  }
+
+  .linkbox{
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-bottom:20px;
+      width: 40vw;
+      background-color: #560eca;
+      border-radius: 20px;
+  }
+  
+  .imgbox{
+      display: flex;
+      justify-content: center;
+      
+    }
+    
+    
+    .destinationcontainer img{
+        width: 35vw;
+        height: 35vh;
+        margin: 20px auto;
+        border-radius: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    
+    .linkboxclick{
+        background-color: #fff;
+        width: 35vw;
+        height: 7vh;
+        margin: 0 auto 2vh auto;
+        border-radius: 20px;
+    }
+    
+    .linkbox a{
+      padding: 5px 20px 20px;
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      color: #00144d;
+      justify-content: space-around;
+      text-decoration: none;
+      
+      margin:10px auto 10px auto;
+      
+      background-position-y: -5rem;
+    }
+ .linkboxclick h2{
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+     font-size: 13px;
+ }
+
+ .i{
+     /* border: 2px solid blue; */
+     justify-content: flex-end;
+     font-size: 25px;
+     display: block;
+     opacity: 0;
+ }
+
+ .linkboxclick:hover {
+     transform: scale(1.1);
+     transition-duration: 1s;
+ }
+
+ .linkboxclick:hover .i{
+    transform: scale(1);
+     transition-duration: 1s;
+     opacity: 1;
+ }
+.linkboxclick:hover h2{
+    transform: scale(1);
+    transition-duration: 1.5s;
+    
+}
+
+
+
+  /*Single Destination [id]*/
+
+  .destinationdetails{
+    /* width: 90vw; */
+    height: 200vh;
+  }
+
+  .destinationdetails h1{
+      padding: 20px;
+  }
+
+
+
+  
+  /* .destinationdetails p{
+
+  } */
+
+
+
+  .imgcont{
+    display: grid;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 50px;
+    margin-right: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'img1 img2 img3 img3'
+    'img1 img4 img5 img6'
+    'img7 img7 img8 img6';
+    
+}
+
+  .imgcont a{
+    width: 100%;
+    height: 16.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transform: all 1s ease;
+}
+.imgcont a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(195, 211, 241, 0.6);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.imgcont i {
+    color:  #581845 ;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 1rem 3rem;
+    z-index: 100;
+    border-radius: .4rem;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.imgcont a:hover i{
+    opacity: 0.9;
+}
+.imgcont a:hover{
+    transform: scale(1.1);
+    z-index: 100;
+    transition-duration: 0.8s;
+}
+.imgcont a:hover::before{
+    opacity: 0.4;
+    
+}
+
+.img1{
+    grid-area: img1;
+    min-height: 33rem;
+}
+.img2{
+    grid-area: img2;
+}
+.img3{
+    grid-area: img3;
+}
+.img4{
+    grid-area: img4;
+}
+.img5{
+    grid-area: img5;
+}
+.img6{
+    grid-area: img6;
+    min-height: 33rem;
+}
+.img7{
+    grid-area: img7;
+}
+.img8{
+    grid-area: img8;
+}
+
+
+/*Making Responsive*/
+
+@media screen and (max-width:1000px){
+    .destinationcontainer{
+        grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    }
+    .linkbox{
+        width: 80vw;
+      
+    }
+    .destinationcontainer img{
+        width: 75vw;
+    }
+    .linkboxclick{
+        border: 2px solid red;
+        background-color: #fff;
+        width: 75vw;
+        height: 7vh;
+        margin: 0 auto 2vh auto;
+        border-radius: 20px;
+    }
+    .linkbox a{
+        padding: 5px 20px 20px;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        color: #00144d;
+        justify-content: space-around;
+        text-decoration: none;
+        
+        margin:10px auto 10px auto;
+        
+        background-position-y: -5rem;
+      }
+   .linkboxclick h2{
+      width: 65vw;
+     
+   }
+  
+   
+  
+}
+
+
+@media screen and (max-width:480px){
+    .mainhead{
+        font-size: 15px;
+        border-radius: 10px;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        display: flex;
+        margin-bottom: 10px;
+        background-color: #560eca;
+        height: 60px;
+    }
+
+}
