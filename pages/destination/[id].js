@@ -102,6 +102,7 @@ const Details = ({ blogdetails }) => {
                 <h1>{blogdetails.title}</h1>
                 <section className={styles.destination}>
                     <div className={styles.imgcont}>
+
                         <Link href={blogdetails.img1}>
                             <a style={img1} target="_blank" className={styles.img1}>
                                 <i> <BiFullscreen /> </i>
