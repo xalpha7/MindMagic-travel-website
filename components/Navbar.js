@@ -3,7 +3,7 @@ import axiosFetch from '../pages/axiosFetch'
 import { MdMenu, MdClose } from 'react-icons/md'
 
 const Navbar = () => {
-    const { data: blogs, isPending, error } = axiosFetch('https://my-json-server.typicode.com/xalpha7/Mindmagic-blog-db/db/blogs');
+    const { data: blogs, isPending, error } = axiosFetch('https://my-json-server.typicode.com/xalpha7/Mindmagic-blog-db/blogs');
     return (
         <>
             {error && <div>{error}</div>}
