@@ -5,7 +5,7 @@ import { BiFullscreen } from 'react-icons/bi'
 
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:8000/blogs');
+    const res = await fetch('https://my-json-server.typicode.com/xalpha7/Mindmagic-blog-db/db/blogs');
 
     const data = await res.json();
 
@@ -26,7 +26,7 @@ export const getStaticProps = async (context) => {
 
     const id = context.params.id;
 
-    const res = await fetch('http://localhost:8000/blogs/' + id);
+    const res = await fetch('https://my-json-server.typicode.com/xalpha7/Mindmagic-blog-db/db/blogs/' + id);
 
     const data = await res.json();
 

@@ -7,7 +7,7 @@ import axiosFetch from './axiosFetch'
 
 
 export default function Home() {
-  const { data: blogs, isPending, error} = axiosFetch('http://localhost:8000/blogs');
+  const { data: blogs, isPending, error} = axiosFetch('https://my-json-server.typicode.com/xalpha7/Mindmagic-blog-db/db/blogs');
    
   return (
     <>
