@@ -13,7 +13,7 @@ const Mid = () => {
             } else {
                 setCurrent(current + 1);
             }
-        }, 300000)
+        }, 3000)
     }, [current])
 
     if (!Array.isArray(SliderData) || SliderData.length <= 0) {

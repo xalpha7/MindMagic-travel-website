@@ -38,7 +38,7 @@
   --bs-dark: #181C32;
 }
 .homecontainer{
-  height: 300vh;
+  height: 170vh;
   overflow: hidden;
   
 }
@@ -202,11 +202,11 @@ nav a:last-child{
   grid-template-columns: 1fr 1fr;
   border-bottom-left-radius: 1vw;
   border-bottom-right-radius: 1vw;
-  border: 2px solid greenyellow;
+  /* border: 2px solid greenyellow; */
 }
 
 .mid-writings{
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   padding: 1rem;
   font-size: 1.12vw;
   display: flex;
