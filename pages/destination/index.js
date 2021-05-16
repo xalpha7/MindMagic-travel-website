@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../styles/Destination.module.css'
 import { BiPaperPlane } from 'react-icons/bi'
-import Media from 'react-media'
-import { Fragment } from 'react';
 
 export const getStaticProps = async () => {
 
