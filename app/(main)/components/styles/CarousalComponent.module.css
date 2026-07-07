@@ -1,0 +1,286 @@
+/* ===========================
+   1. Layout
+=========================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80svh;
+  min-height: 600px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+
+/* ===========================
+   2. Containers & Visibility Fixes
+=========================== */
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.08);
+  transition:
+    opacity 1s ease,
+    transform 6s ease,
+    visibility 1s ease;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.content {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: clamp(1rem, 8vw, 8rem);
+  transform: translateY(-50%);
+
+  width: min(650px, 90%);
+  padding: var(--space-xl);
+
+  /* OPTIMIZED: Darker backdrop tint to guarantee extreme contrast against bright or white images */
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ===========================
+   3. Sections
+=========================== */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  /* OPTIMIZED: Deeper gradient to block out high-exposure imagery behind the text layout */
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+}
+
+
+/* ===========================
+   4. Typography (High Contrast)
+=========================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: var(--space-md);
+  padding: var(--space-xs) var(--space-md);
+
+  /* OPTIMIZED: Pure white text with soft dark shadow for maximum legibility */
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.title {
+  margin: 0;
+
+  /* OPTIMIZED: Clear white text with crisp drop shadow boundary layer */
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+
+.subtitle {
+  margin-top: var(--space-md);
+  max-width: 550px;
+
+  /* OPTIMIZED: High opacity off-white/silver shade ensuring comfortable text readings */
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+}
+
+
+/* ===========================
+   5. Performance-Optimized Animation
+=========================== */
+
+.image {
+  object-fit: cover;
+}
+
+/* OPTIMIZED: Only triggers hardware animation transitions on the visible element */
+.active .image {
+  animation: zoomEffect 8s ease-in-out infinite;
+}
+
+@keyframes zoomEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+
+/* ===========================
+   6. Buttons
+=========================== */
+
+.actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.primaryButton {
+  border: none;
+  background: #ffffff;
+  color: #000000;
+}
+
+.primaryButton:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-3px);
+}
+
+.secondaryButton {
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+
+/* ===========================
+   7. Controls & Utilities
+=========================== */
+
+.arrow {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.left { left: var(--space-lg); }
+.right { right: var(--space-lg); }
+
+.dots {
+  position: absolute;
+  z-index: 5;
+  bottom: var(--space-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.25s ease;
+}
+
+.activeDot {
+  width: 36px;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+
+/* ===========================
+   8. Responsive Settings
+=========================== */
+
+@media (max-width: 1024px) {
+  .hero { height: 75svh; }
+  .content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .subtitle { margin-inline: auto; }
+  .actions { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+  .hero { min-height: 500px; }
+  .content {
+    padding: var(--space-lg);
+    width: calc(100% - 2rem);
+  }
+  .title { font-size: 2.2rem; }
+  .arrow { width: 42px; height: 42px; }
+  .left { left: var(--space-sm); }
+  .right { right: var(--space-sm); }
+  .actions { flex-direction: column; }
+  .primaryButton, .secondaryButton { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .hero { height: 70svh; }
+  .content { backdrop-filter: blur(12px); }
+  .badge { font-size: 0.8rem; }
+  .subtitle { font-size: 0.95rem; }
+  .dots { bottom: var(--space-md); }
+}
