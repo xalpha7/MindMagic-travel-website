@@ -1,0 +1,166 @@
+.contactForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.inputGroup,
+.inputGroupFull {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.contactForm label {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  transition: var(--transition);
+}
+
+.contactForm input {
+  min-height: 48px;
+}
+
+.contactForm textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: var(--text-light);
+  font-size: var(--font-size-sm);
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+
+
+/* ==========================================================
+   Tablet (≤1024px)
+========================================================== */
+
+@media (max-width: 1024px) {
+
+  .contactForm {
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .contactForm label {
+    font-size: var(--font-size-md);
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: var(--font-size-sm);
+  }
+
+}
+
+
+/* ==========================================================
+   Desktop (≥768px)
+========================================================== */
+
+@media (min-width: 768px) {
+
+  .contactForm {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+  }
+
+  .inputGroupFull {
+    grid-column: span 2;
+  }
+}
+
+
+/* ==========================================================
+   Mobile (≤768px)
+========================================================== */
+
+@media (max-width: 768px) {
+
+  .contactForm {
+    padding: var(--space-md);
+    gap: var(--space-sm);
+    border-radius: var(--radius-md);
+  }
+
+  .contactForm label {
+    font-size: var(--font-size-md);
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: var(--font-size-sm);
+    padding: var(--space-sm);
+  }
+
+  .contactForm input {
+    min-height: 46px;
+  }
+
+  .contactForm textarea {
+    min-height: 120px;
+  }
+
+}
+
+
+/* ==========================================================
+   Small Mobile (≤480px)
+========================================================== */
+
+@media (max-width: 480px) {
+
+  .contactForm {
+    padding: var(--space-sm);
+    gap: var(--space-sm);
+  }
+
+  .contactForm label {
+    font-size: var(--font-size-md);
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: var(--font-size-xs);
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .contactForm input {
+    min-height: 44px;
+  }
+
+  .contactForm textarea {
+    min-height: 110px;
+  }
+
+}

@@ -1,0 +1,142 @@
+/* ==========================================================
+   Service Chips
+========================================================== */
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+  width: 100%;
+  align-items: stretch;
+}
+
+.serviceChip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 0.85rem 1rem;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  color: var(--text-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  text-align: center;
+
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  cursor: default;
+  overflow: hidden;
+}
+
+.serviceChip:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.serviceIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: var(--primary-light);
+
+  font-size: 1rem;
+}
+
+/* ==========================================================
+   Large Desktop
+========================================================== */
+
+@media (min-width: 1400px) {
+  .serviceGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* ==========================================================
+   Desktop
+========================================================== */
+
+@media (max-width: 1200px) {
+  .serviceGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==========================================================
+   Tablet
+========================================================== */
+
+@media (max-width: 992px) {
+  .serviceGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .serviceChip {
+    padding: 0.75rem;
+  }
+}
+
+/* ==========================================================
+   Mobile
+========================================================== */
+
+@media (max-width: 640px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .serviceChip {
+    padding: 0.7rem;
+    font-size: var(--font-size-xs);
+    gap: 0.5rem;
+  }
+
+  .serviceIcon {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ==========================================================
+   Small Phones
+========================================================== */
+
+@media (max-width: 360px) {
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   Accessibility
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .serviceChip,
+  .serviceChip:hover {
+    transition: none;
+    transform: none;
+  }
+}

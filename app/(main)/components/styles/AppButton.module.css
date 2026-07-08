@@ -1,0 +1,66 @@
+.submitButton {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-heading);
+    font-size: var(--font-size-md);
+    color: var(--text-white);
+
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius-md);
+
+    padding: var(--space-md);
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.submitButton:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.submitButton:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+
+    .submitButton {
+        font-size: var(--font-size-md);
+    }
+}
+
+@media (min-width: 768px) {
+
+    .submitButton {
+        grid-column: span 2;
+        width: max-content;
+        min-width: 180px;
+        padding: var(--space-md) var(--space-xl);
+        font-size: var(--font-size-md);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .submitButton {
+        width: 100%;
+        min-height: 46px;
+        font-size: var(--font-size-md);
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .submitButton {
+        min-height: 44px;
+        font-size: var(--font-size-md);
+    }
+}

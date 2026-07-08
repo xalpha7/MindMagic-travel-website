@@ -1,0 +1,33 @@
+.ctaButton {
+  margin-top: var(--space-xl);
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: var(--text-white);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: var(--font-size-md);
+}
+
+.ctaButton:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.cta {
+  background: var(--primary-light);
+  padding: 5rem var(--space-lg);
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: auto;
+}
+
+.cta h2 {
+  font-family: var(--font-heading);
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}

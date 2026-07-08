@@ -1,0 +1,117 @@
+.promise {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.promiseItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  background: var(--background);
+  transition: var(--transition);
+}
+
+.promiseItem span {
+  flex-shrink: 0;
+  color: var(--secondary);
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.promiseItem p {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.promiseItem:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+
+/* ==========================================================
+   Tablet (≤1024px)
+========================================================== */
+
+@media (max-width: 1024px) {
+
+  .promise {
+    padding: var(--space-lg);
+  }
+
+  .promiseItem {
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .promiseItem span {
+    font-size: var(--font-size-lg);
+  }
+
+  .promiseItem p {
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+  }
+}
+
+
+/* ==========================================================
+   Mobile (≤768px)
+========================================================== */
+
+@media (max-width: 768px) {
+
+  .promise {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .promiseItem {
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+
+  .promiseItem span {
+    margin-top: 2px;
+    font-size: var(--font-size-md);
+  }
+
+  .promiseItem p {
+    font-size: var(--font-size-sm);
+    line-height: 1.45;
+  }
+}
+
+
+/* ==========================================================
+   Small Mobile (≤480px)
+========================================================== */
+
+@media (max-width: 480px) {
+
+  .promise {
+    padding: var(--space-sm);
+  }
+
+  .promiseItem {
+    padding: var(--space-sm);
+    gap: var(--space-xs);
+  }
+
+  .promiseItem span {
+    font-size: var(--font-size-md);
+  }
+
+  .promiseItem p {
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+  }
+}

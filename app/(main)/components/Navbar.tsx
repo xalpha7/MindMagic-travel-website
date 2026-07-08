@@ -15,6 +15,7 @@ import {
 } from "react-icons/md";
 
 import styles from "./styles/Navbar.module.css";
+import { APP_NAME } from "@/constants";
 
 interface NavigationItem {
   href: string;
@@ -45,7 +46,9 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
   },
 ];
 
+
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = useCallback(() => {
@@ -56,6 +59,20 @@ export default function Navbar() {
     setIsOpen((prev) => !prev);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
+  }, []);
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -84,8 +101,10 @@ export default function Navbar() {
     <>
       <header className={styles.header}>
         <nav
-          className={styles.navbar}
+          className={`${styles.navbar} ${isScrolled ? styles.navbarScrolled : ""
+            }`}
           aria-label="Primary navigation"
+        
         >
           <Link
             href="/"
@@ -94,14 +113,17 @@ export default function Navbar() {
           >
             <Image
               src="/tent.png"
-              alt="MindMagic Travels"
+              alt={APP_NAME}
               width={46}
               height={46}
               priority
             />
 
-            <span className={styles.logoText}>
-              MindMagic Travels
+            <span
+              className={`${styles.logoText} ${isScrolled ? styles.logoTextScrolled : ""
+                }`}
+            >
+              {APP_NAME}
             </span>
           </Link>
 
@@ -110,7 +132,8 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={styles.navigationLink}
+                className={`${styles.navigationLink} ${isScrolled ? styles.navigationLinkScrolled : ""
+                  }`}
               >
                 {item.label}
               </Link>
@@ -118,7 +141,8 @@ export default function Navbar() {
           </div>
 
           <button
-            className={styles.menuButton}
+            className={`${styles.menuButton} ${isScrolled ? styles.menuButtonScrolled : ""
+              }`}
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
@@ -130,18 +154,16 @@ export default function Navbar() {
       {/* Backdrop */}
 
       <div
-        className={`${styles.backdrop} ${
-          isOpen ? styles.backdropVisible : ""
-        }`}
+        className={`${styles.backdrop} ${isOpen ? styles.backdropVisible : ""
+          }`}
         onClick={closeMenu}
       />
 
       {/* Bottom Sheet */}
 
       <aside
-        className={`${styles.bottomSheet} ${
-          isOpen ? styles.bottomSheetOpen : ""
-        }`}
+        className={`${styles.bottomSheet} ${isOpen ? styles.bottomSheetOpen : ""
+          }`}
       >
         <div className={styles.dragHandle} />
 

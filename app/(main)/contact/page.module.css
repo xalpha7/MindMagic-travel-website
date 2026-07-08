@@ -1,0 +1,16 @@
+
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+
+  .contactGrid {
+    grid-template-columns: 2fr 3fr;
+    gap: var(--space-xl);
+  }
+
+}

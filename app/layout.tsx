@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Goblin_One, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import Footer from "./(main)/components/Footer";
-
+import { APP_NAME } from "@/constants";
 const goblinOne = Goblin_One({
   weight: "400",
   subsets: ["latin"],
@@ -19,11 +19,11 @@ const permanentMarker = Permanent_Marker({
 
 export const metadata: Metadata = {
   title: {
-    default: "MindMagic Travels",
-    template: "%s | MindMagic Travels",
+    default: APP_NAME,
+    template: `%s | ${APP_NAME}`,
   },
   description:
-    "Discover unforgettable adventures with MindMagic Travels.",
+    `Discover unforgettable adventures with ${APP_NAME}.`,
 };
 
 export default function RootLayout({

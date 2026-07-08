@@ -1,0 +1,141 @@
+.hero {
+  position: relative;
+  height: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, 92%);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+
+  padding-top: 20%;
+}
+
+.companyInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+
+  filter:
+    drop-shadow(0 16px 120px rgba(0, 0, 0, 0.7))
+    drop-shadow(0 32px 20px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0 12px rgba(0, 0, 0, 0.45));
+}
+.logoWrapper {
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(10px);
+
+  border: 4px solid rgba(255, 255, 255, .7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.companyLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.companyText {
+  display: flex;
+  flex-direction: column;
+}
+
+.companyText h1 {
+  margin: 0;
+  color: var(--text-white);
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.companyText p {
+  margin-top: .5rem;
+  color: rgba(255, 255, 255, .9);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width:768px) {
+
+  .hero {
+    height: 320px;
+  }
+
+  .heroContent {
+    padding-top: 32%;
+  }
+
+  .companyInfo {
+    gap: 1rem;
+  }
+
+  .logoWrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .companyText h1 {
+    font-size: 2rem;
+  }
+
+  .companyText p {
+    font-size: .95rem;
+  }
+
+}
+
+@media (max-width:480px) {
+
+  .hero {
+    height: 280px;
+  }
+
+  .heroContent {
+    padding-top: 36%;
+  }
+
+  .logoWrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .companyText h1 {
+    font-size: 1.6rem;
+  }
+
+  .companyText p {
+    font-size: .85rem;
+  }
+
+}
