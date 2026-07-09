@@ -1,52 +1,62 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import styles from '../../styles/Destination.module.css'
-import { BiPaperPlane } from 'react-icons/bi'
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "./page.module.css";
+import { BiPaperPlane } from "react-icons/bi";
 
-export const getStaticProps = async () => {
+import { blogs } from "./data/blogs";
+import PageBanner from "../components/PageBanners";
+import PageHeading from "../components/PageHeading";
+type Blog = {
+    id: number;
+    title: string;
+    img7: string;
+    // add other fields from your JSON as needed
+};
 
-    const res = await fetch('https://my-json-server.typicode.com/xalpha7/Mindmagic-blog-db/blogs');
 
-    const data = await res.json();
 
-    return {
-        props: {
-            blogs: data
-        }
-    }
-}
-
-const Destination = ({ blogs }) => {
-
+const BlogPage = () => {
     return (
-        <>
-            <Head>
-                <title>MindMagic Travel Blogs | Destination</title>
-            </Head>
-            <h1 className={ styles.mainhead }>Popular Destination</h1>
-            <div className={ styles.destinationcontainer }>
-                {
-                    blogs.map(blog => (
-                        <div className={ styles.linkbox }>
-                            <div className={ styles.imgbox }>
-                                <img src={ blog.img7 } alt="" />
-                            </div>
-                            <div className={ styles.linkboxclick }>
-                                <Link href={ '/destination/' + blog.id } key={ blog.id } >
-                                    <a>
-                                        <h2>{ blog.title }</h2>
-                                        <BiPaperPlane className={ styles.i } />
+        <main className={"appPage"}>
+            <PageBanner pagetitle={"Blogs"} />
+           
+            <section className={"pageSection"}>
+                <PageHeading
+                    title="Travel Stories & Guides"
+                    subtitle="Inspiration for every journey."
+                />
+                <div className={styles.destinationcontainer}>
+                    {blogs.map((blog) => (
+                        <article
+                            key={blog.id}
+                            className={styles.linkbox}
+                        >
+                            <Link
+                                href={`/blog/${blog.id}`}
+                                className={styles.cardLink}
+                            >
+                                <div className={styles.imgbox}>
+                                    <Image
+                                        src={blog.thumbnail}
+                                        alt={blog.title}
+                                        fill
+                                        sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                                    />
+                                </div>
 
-                                    </a>
-                                </Link>
-                            </div>
+                                <div className={styles.linkboxclick}>
+                                    <h2>{blog.title}</h2>
 
-                        </div>
-                    ))
-                }
-            </div>
-        </>
+                                    <BiPaperPlane className={styles.i} />
+                                </div>
+                            </Link>
+                        </article>
+                    ))}
+                </div>
+            </section>
+        </main>
     );
-}
+};
 
-export default Destination;
+export default BlogPage;

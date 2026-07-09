@@ -3,16 +3,18 @@ import styles from "./styles/PageBanner.module.css";
 import { APP_NAME, PAGE_BANNER_IMG } from "@/constants";
 
 interface PageBannerProps{
-    pagetitle : String;
+    pagetitle : string;
+    img? : string;
 }
 
-const PageBanner: React.FC<PageBannerProps> = ({pagetitle}) => {
+
+const PageBanner: React.FC<PageBannerProps> = ({pagetitle, img =  PAGE_BANNER_IMG,}) => {
     const currentYear = new Date().getFullYear();
 
     return (
         <section className={styles.hero}>
             <Image
-                src={PAGE_BANNER_IMG}
+                src={img}
                 alt={APP_NAME}
                 fill
                 priority

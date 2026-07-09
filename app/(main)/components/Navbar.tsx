@@ -30,8 +30,8 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
     icon: <MdHome />,
   },
   {
-    href: "/destination",
-    label: "Destinations",
+    href: "/blog",
+    label: "Blog",
     icon: <MdTravelExplore />,
   },
   {
