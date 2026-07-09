@@ -36,21 +36,16 @@ const Front: React.FC = () => {
             </p>
 
             <div className={styles.actions}>
+              
               <Link
-                href="/blogs"
+                href="/blog"
                 className={styles.primaryBtn}
                 aria-label="Explore travel blogs"
               >
                 Explore Blogs
               </Link>
 
-              <Link
-                href="/stories"
-                className={styles.secondaryBtn}
-                aria-label="Read our travel stories"
-              >
-                Our Stories
-              </Link>
+            
             </div>
           </div>
         </div>

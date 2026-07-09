@@ -41,7 +41,7 @@ export default function Booking({ blog }: Props) {
 
       </div>
 
-      <button>
+      <button className={"primary"}>
         Book Your Trip
       </button>
 

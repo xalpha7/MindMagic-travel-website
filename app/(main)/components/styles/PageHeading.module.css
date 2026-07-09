@@ -1,12 +1,14 @@
 .pageHeading {
- text-align: center;
+  text-align: center;
   margin-bottom: var(--space-xl);
 }
 
 .pageHeading span {
   font-family: var(--font-body);
-  font-size: var(--font-size-xs);
-  color: var(--primary);
+  font-size: var(--font-size-sm);
+  letter-spacing: .15rem;
+  font-weight: 700;
+  color: #888;
   letter-spacing: 0.1em;
   display: block;
   margin-bottom: var(--space-xs);

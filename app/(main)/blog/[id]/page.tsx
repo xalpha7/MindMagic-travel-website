@@ -26,17 +26,17 @@ interface Props {
 export default async function TravelDetails({ params }: Props) {
   const { id } = await params;
 
-  const blog = blogs.find((item : TravelExperience) => item.id === id);
+  const blog = blogs.find((item: TravelExperience) => item.id === id);
 
   if (!blog) {
     notFound();
   }
 
   return (
-    <main className={styles.page}>
+    <main className={"appPage"}>
       <Hero blog={blog} />
 
-      <section className={styles.container}>
+     <section className={"pageSection"}>
         <QuickInfo blog={blog} />
         <Overview blog={blog} />
         <Gallery blog={blog} />

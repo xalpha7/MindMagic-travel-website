@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import styles from "./styles/CarousalComponent.module.css";
@@ -12,6 +13,7 @@ const CarousalComponent = () => {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
 
+const router = useRouter();
   const length = SliderData.length;
 
   // Wrapped in useCallback to prevent stale closure bugs in Event Listeners
@@ -43,8 +45,8 @@ const CarousalComponent = () => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement;
       if (
-        target.tagName === "INPUT" || 
-        target.tagName === "TEXTAREA" || 
+        target.tagName === "INPUT" ||
+        target.tagName === "TEXTAREA" ||
         target.isContentEditable
       ) {
         return; // Don't trigger if user is typing
@@ -71,9 +73,8 @@ const CarousalComponent = () => {
       {SliderData.map((slide, index) => (
         <div
           key={slide.image}
-          className={`${styles.slide} ${
-            index === current ? styles.active : ""
-          }`}
+          className={`${styles.slide} ${index === current ? styles.active : ""
+            }`}
         >
           <Image
             src={slide.image}
@@ -98,14 +99,12 @@ const CarousalComponent = () => {
 
             <div className={styles.actions}>
               {slide.primaryBtnText && (
-                <button type="button" className={styles.primaryButton}>
+                <button
+                  type="button"
+                  className={styles.primaryButton}
+                  onClick={() => router.push(slide.link)}
+                >
                   {slide.primaryBtnText}
-                </button>
-              )}
-
-              {slide.secondaryBtnText && (
-                <button type="button" className={styles.secondaryButton}>
-                  {slide.secondaryBtnText}
                 </button>
               )}
             </div>
@@ -136,9 +135,8 @@ const CarousalComponent = () => {
           <button
             key={index}
             type="button"
-            className={`${styles.dot} ${
-              current === index ? styles.activeDot : ""
-            }`}
+            className={`${styles.dot} ${current === index ? styles.activeDot : ""
+              }`}
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
           />

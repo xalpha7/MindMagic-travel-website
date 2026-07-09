@@ -1,8 +1,4 @@
-.page {
-  width: 100%;
-  min-height: 100vh;
-  background: var(--color-background);
-}
+
 
 .container {
   width: min(1300px, 92%);

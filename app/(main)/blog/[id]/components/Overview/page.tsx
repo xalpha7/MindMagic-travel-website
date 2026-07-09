@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { TravelExperience } from "../../../types/travel";
+import PageHeading from "@/app/(main)/components/PageHeading";
 
 interface Props {
   blog: TravelExperience;
@@ -12,14 +13,11 @@ export default function Overview({ blog }: Props) {
 
       <div className={styles.left}>
 
-        <span className={styles.tag}>
-          ABOUT THIS JOURNEY
-        </span>
 
-        <h2>
-          Discover {blog.city}, {blog.country}
-        </h2>
-
+        <PageHeading
+          title="ABOUT THIS JOURNEY"
+          subtitle={`Discover ${blog.city}, ${blog.country}`}
+        />
         <p>{blog.description}</p>
 
         <div className={styles.highlights}>

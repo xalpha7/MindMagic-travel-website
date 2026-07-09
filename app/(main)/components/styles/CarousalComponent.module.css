@@ -1,198 +1,124 @@
-/* ===========================
-   1. Layout
-=========================== */
-
 .hero {
   position: relative;
   width: 100%;
-  height: 80svh;
-  min-height: 600px;
+  height: clamp(520px, 78vh, 760px);
   overflow: hidden;
-  isolation: isolate;
+  isolation: isolate
 }
-
-
-/* ===========================
-   2. Containers & Visibility Fixes
-=========================== */
 
 .slide {
   position: absolute;
   inset: 0;
   opacity: 0;
   visibility: hidden;
-  transform: scale(1.08);
-  transition:
-    opacity 1s ease,
-    transform 6s ease,
-    visibility 1s ease;
+  transform: scale(1.05);
+  transition: opacity .8s ease, transform 6s ease, visibility .8s ease
 }
 
 .active {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
+  transform: scale(1)
+}
+
+.image {
+  object-fit: cover;
+  object-position: center center
+}
+
+.active .image {
+  animation: zoom 10s ease-in-out infinite
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.05)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .72)0%, rgba(0, 0, 0, .42)42%, rgba(0, 0, 0, .12)100%)
 }
 
 .content {
   position: absolute;
   z-index: 3;
   top: 50%;
-  left: clamp(1rem, 8vw, 8rem);
+  left: clamp(1.5rem, 6vw, 6rem);
   transform: translateY(-50%);
-
-  width: min(650px, 90%);
-  padding: var(--space-xl);
-
-  /* OPTIMIZED: Darker backdrop tint to guarantee extreme contrast against bright or white images */
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: min(500px, 90%);
+  padding: clamp(1.25rem, 2vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  border-radius: 24px;
+  background: rgba(0, 0, 0, .35);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, .15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .35)
 }
-
-
-/* ===========================
-   3. Sections
-=========================== */
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-
-  /* OPTIMIZED: Deeper gradient to block out high-exposure imagery behind the text layout */
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.5) 50%,
-      rgba(0, 0, 0, 0.2) 100%
-    );
-}
-
-
-/* ===========================
-   4. Typography (High Contrast)
-=========================== */
 
 .badge {
-  display: inline-flex;
-  align-items: center;
-
-  margin-bottom: var(--space-md);
-  padding: var(--space-xs) var(--space-md);
-
-  /* OPTIMIZED: Pure white text with soft dark shadow for maximum legibility */
-  color: #ffffff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: var(--radius-full);
-
-  font-size: 0.9rem;
+  width: fit-content;
+  padding: .42rem .9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .18);
+  color: #fff;
+  font-size: .72rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: .08em;
+  text-transform: uppercase
 }
-
 
 .title {
   margin: 0;
-
-  /* OPTIMIZED: Clear white text with crisp drop shadow boundary layer */
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-
-  font-size: clamp(2.5rem, 5vw, 4.8rem);
-  line-height: 1.1;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
   font-weight: 800;
+  letter-spacing: -.02em
 }
-
 
 .subtitle {
-  margin-top: var(--space-md);
-  max-width: 550px;
-
-  /* OPTIMIZED: High opacity off-white/silver shade ensuring comfortable text readings */
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin: 0;
+  color: rgba(255, 255, 255, .88);
+  font-size: clamp(.95rem, 1.3vw, 1.08rem);
   line-height: 1.6;
+  max-width: 430px
 }
-
-
-/* ===========================
-   5. Performance-Optimized Animation
-=========================== */
-
-.image {
-  object-fit: cover;
-}
-
-/* OPTIMIZED: Only triggers hardware animation transitions on the visible element */
-.active .image {
-  animation: zoomEffect 8s ease-in-out infinite;
-}
-
-@keyframes zoomEffect {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-  100% { transform: scale(1); }
-}
-
-
-/* ===========================
-   6. Buttons
-=========================== */
 
 .actions {
-  display: flex;
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
-}
-
-.primaryButton,
-.secondaryButton {
-  padding: var(--space-sm) var(--space-lg);
-  border-radius: var(--radius-full);
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  margin-top: .4rem
 }
 
 .primaryButton {
   border: none;
-  background: #ffffff;
-  color: #000000;
+  cursor: pointer;
+  padding: .82rem 1.4rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  font-size: .9rem;
+  font-weight: 600;
+  transition: .25s ease
 }
 
 .primaryButton:hover {
-  background: rgba(255, 255, 255, 0.85);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  background: #f3f3f3
 }
-
-.secondaryButton {
-  border: 2px solid #ffffff;
-  background: transparent;
-  color: #ffffff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-.secondaryButton:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-3px);
-}
-
-
-/* ===========================
-   7. Controls & Utilities
-=========================== */
 
 .arrow {
   position: absolute;
@@ -202,85 +128,209 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .18);
+  background: rgba(255, 255, 255, .12);
+  backdrop-filter: blur(14px);
+  color: #fff;
   cursor: pointer;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  transition: all 0.25s ease;
+  transition: .25s
 }
 
 .arrow:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%) scale(1.08);
+  background: rgba(255, 255, 255, .22)
 }
 
-.left { left: var(--space-lg); }
-.right { right: var(--space-lg); }
+.left {
+  left: 1.5rem
+}
+
+.right {
+  right: 1.5rem
+}
 
 .dots {
   position: absolute;
   z-index: 5;
-  bottom: var(--space-xl);
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: var(--space-sm);
+  align-items: center;
+  gap: .5rem
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
-  border-radius: var(--radius-full);
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
   border: none;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.4);
-  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, .35);
+  transition: .3s
 }
 
 .activeDot {
-  width: 36px;
-  background: #ffffff;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  width: 32px;
+  background: #fff
 }
 
+@media(max-width:1024px) {
+  .hero {
+    height: 70vh
+  }
 
-/* ===========================
-   8. Responsive Settings
-=========================== */
-
-@media (max-width: 1024px) {
-  .hero { height: 75svh; }
   .content {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: min(520px, 92%)
   }
-  .subtitle { margin-inline: auto; }
-  .actions { justify-content: center; }
+
+  .badge,
+  .subtitle {
+    margin-inline: auto
+  }
 }
 
-@media (max-width: 768px) {
-  .hero { min-height: 500px; }
+@media(max-width:768px) {
+  .hero {
+    height: 72vh;
+    min-height: 480px;
+    max-height: 560px
+  }
+
+  .image {
+    object-position: 65% center
+  }
+
+  .overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, .2)0%, rgba(0, 0, 0, .45)45%, rgba(0, 0, 0, .82)100%)
+  }
+
   .content {
-    padding: var(--space-lg);
-    width: calc(100% - 2rem);
+    left: 50%;
+    top: auto;
+    bottom: 4.2rem;
+    transform: translateX(-50%);
+    width: calc(100% - 1.4rem);
+    max-width: 360px;
+    padding: 1rem;
+    gap: .55rem;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(12px)
   }
-  .title { font-size: 2.2rem; }
-  .arrow { width: 42px; height: 42px; }
-  .left { left: var(--space-sm); }
-  .right { right: var(--space-sm); }
-  .actions { flex-direction: column; }
-  .primaryButton, .secondaryButton { width: 100%; }
+
+  .badge {
+    padding: .32rem .65rem;
+    font-size: .6rem
+  }
+
+  .title {
+    font-size: 1.55rem;
+    line-height: 1.15
+  }
+
+  .subtitle {
+    font-size: .82rem;
+    line-height: 1.45;
+    max-width: 100%
+  }
+
+  .actions {
+    margin-top: .25rem
+  }
+
+  .primaryButton {
+    width: 100%;
+    padding: .72rem;
+    font-size: .82rem
+  }
+
+  .arrow {
+    width: 34px;
+    height: 34px
+  }
+
+  .left {
+    left: .5rem
+  }
+
+  .right {
+    right: .5rem
+  }
+
+  .dots {
+    bottom: 1rem;
+    gap: .35rem
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px
+  }
+
+  .activeDot {
+    width: 20px
+  }
 }
 
-@media (max-width: 480px) {
-  .hero { height: 70svh; }
-  .content { backdrop-filter: blur(12px); }
-  .badge { font-size: 0.8rem; }
-  .subtitle { font-size: 0.95rem; }
-  .dots { bottom: var(--space-md); }
+@media(max-width:480px) {
+  .hero {
+    height: 68vh;
+    min-height: 450px
+  }
+
+  .image {
+    object-position: 68% center
+  }
+
+  .content {
+    bottom: 3.5rem;
+    width: calc(100% - 1rem);
+    padding: .85rem;
+    gap: .45rem;
+    border-radius: 14px
+  }
+
+  .badge {
+    font-size: .56rem;
+    padding: .28rem .58rem
+  }
+
+  .title {
+    font-size: 1.35rem
+  }
+
+  .subtitle {
+    font-size: .76rem;
+    line-height: 1.4
+  }
+
+  .primaryButton {
+    padding: .68rem;
+    font-size: .78rem
+  }
+
+  .arrow {
+    width: 30px;
+    height: 30px
+  }
+
+  .dots {
+    bottom: .8rem
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px
+  }
+
+  .activeDot {
+    width: 18px
+  }
 }

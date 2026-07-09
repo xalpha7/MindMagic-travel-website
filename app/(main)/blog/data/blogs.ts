@@ -232,7 +232,7 @@ export const blogs: TravelExperience[] = [
             caption: "Fushimi Inari Taisha walkway"
           },
           {
-            url: "https://www.youtube.com/embed/JdBbLwK0b6A",
+            url: "https://www.youtube.com/watch?v=tPYdWHwJpaw",
             type: "video",
             caption: "Cinematic Kyoto Highlights"
           }
@@ -244,7 +244,7 @@ export const blogs: TravelExperience[] = [
         description: "Morning paths through towering stalks of historic green bamboo.",
         media: [
           {
-            url: "https://images.unsplash.com/photo-1473872171536-40733d49e5e4?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1531021713651-fdd4ac075ac1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image",
             caption: "Arashiyama Path"
           }
@@ -294,7 +294,7 @@ export const blogs: TravelExperience[] = [
         rating: 4.9,
         media: [
           {
-            url: "https://images.unsplash.com/photo-1604928141246-3200ff7e937d?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1571754687694-15eb9a3ac00b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image"
           }
         ]
@@ -328,7 +328,7 @@ export const blogs: TravelExperience[] = [
         description: "Primary international entry point for Western Japan.",
         media: [
           {
-            url: "https://images.unsplash.com/photo-1610635393570-5c6810243458?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1775113207373-8a6a48d8a931?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image"
           }
         ],
@@ -433,12 +433,12 @@ export const blogs: TravelExperience[] = [
         description: "Standing inside the monumental walls of the Flavian Amphitheatre.",
         media: [
           {
-            url: "https://images.unsplash.com/photo-1529260830199-44584110b64f?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1699012462295-bace478f27bc?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image",
             caption: "The Mighty Colosseum"
           },
           {
-            url: "https://www.youtube.com/embed/DEACz_V75Ew",
+            url: "https://www.youtube.com/watch?v=1-bLGdChz3Q",
             type: "video",
             caption: "Cinematic Visuals of Rome"
           }
@@ -534,7 +534,7 @@ export const blogs: TravelExperience[] = [
         description: "Primary international entry aviation hub of Italy.",
         media: [
           {
-            url: "https://images.unsplash.com/photo-1542296332-2e4473fac563?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1558204692-5f402fe220b9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image"
           }
         ],
@@ -644,7 +644,7 @@ export const blogs: TravelExperience[] = [
             caption: "Manhattan Grid at Twilight"
           },
           {
-            url: "https://www.youtube.com/embed/f07unPDoWb4",
+            url: "https://www.youtube.com/watch?v=aca-m_ijKF8",
             type: "video",
             caption: "Vibrant New York Guide"
           }
@@ -656,7 +656,7 @@ export const blogs: TravelExperience[] = [
         description: "A peaceful retreat from the fast-paced concrete jungle.",
         media: [
           {
-            url: "https://images.unsplash.com/photo-1513829092359-0f86be2e8f06?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1702569111308-d02dcc169afd?q=80&w=1051&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image",
             caption: "The Mall Pathway in Central Park"
           }
@@ -706,7 +706,7 @@ export const blogs: TravelExperience[] = [
         rating: 4.8,
         media: [
           {
-            url: "https://images.unsplash.com/photo-1524004524706-330e4a432bac?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1699025095617-5570bc591fb4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image"
           }
         ]
@@ -723,7 +723,7 @@ export const blogs: TravelExperience[] = [
         rating: 4.9,
         media: [
           {
-            url: "https://images.unsplash.com/photo-1601887389937-0b02c26b6c3c?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1753363754464-58a41b3b954b?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image"
           }
         ]
@@ -740,7 +740,7 @@ export const blogs: TravelExperience[] = [
         description: "The primary global entry point into New York City.",
         media: [
           {
-            url: "https://images.unsplash.com/photo-1542296332-2e4473fac563?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1773140149705-3bd846fd50a9?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image"
           }
         ],
@@ -845,12 +845,12 @@ export const blogs: TravelExperience[] = [
         description: "Walking through early morning mist draping over deep terraced valleys.",
         media: [
           {
-            url: "https://images.unsplash.com/photo-1518548419070-6842fa330722?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1633820313053-fa030b13ef94?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image",
             caption: "Tegalalang Rice Terraces"
           },
           {
-            url: "https://www.youtube.com/embed/mvz3wI6S7pY",
+            url: "https://www.youtube.com/watch?v=zHcr32gRRCs",
             type: "video",
             caption: "Cinematic Journey Across Bali"
           }
@@ -980,7 +980,7 @@ export const blogs: TravelExperience[] = [
         description: "The premier upscale coastal destination for beach clubs and ocean dinners.",
         media: [
           {
-            url: "https://images.unsplash.com/photo-1518548419070-6842fa330722?auto=format&fit=crop&w=800&q=80",
+            url: "https://images.unsplash.com/photo-1672708484804-1f288bb22733?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             type: "image"
           }
         ],

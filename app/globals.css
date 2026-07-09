@@ -267,6 +267,37 @@ table {
 .appPage * {
   box-sizing: border-box;
 }
+.primary,
+.secondary {
+
+    height: 50px;
+
+    padding: 0 28px;
+
+    border-radius: 999px;
+
+    font-size: var(--font-size-sm);
+
+    font-weight: 700;
+
+    transition: .3s;
+
+    cursor: pointer;
+}
+
+.primary {
+
+    border: none;
+
+    background: white;
+
+    color: black;
+}
+
+.primary:hover {
+
+    transform: translateY(-2px);
+}
 
 .cardGrid {
   display: grid;
@@ -291,7 +322,7 @@ table {
 
   width: 100%;
   min-width: 0;
-
+  
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
